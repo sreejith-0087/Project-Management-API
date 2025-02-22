@@ -51,6 +51,57 @@ $ python manage.py runserver
 - PUT `/api/tasks/{id}/` - Update a task (e.g., assign employees)
 - DELETE `/api/tasks/{id}/` - Delete a task
 
+## Postman Testing Demo
+
+### Importing the Postman Collection
+1. **Download the Postman Collection JSON file** (provided below).
+2. Open **Postman**.
+3. Click **Import** → Select the JSON file → Click **Open**.
+4. The collection will appear in **Postman** under "Collections."
+
+### Sample API Requests Using Postman
+
+#### 1. Create an Employee (POST)
+- **Endpoint:** `POST http://localhost:8000/api/employees/`
+- **Body (JSON):**
+  ```json
+  {
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "position": "Software Engineer"
+  }
+  ```
+
+#### 2. Create a Project (POST)
+- **Endpoint:** `POST http://localhost:8000/api/projects/`
+- **Body (JSON):**
+  ```json
+  {
+    "name": "EV Charging Station Management"
+  }
+  ```
+
+#### 3. Create a Task (POST)
+- **Endpoint:** `POST http://localhost:8000/api/tasks/`
+- **Body (JSON):**
+  ```json
+  {
+    "title": "Develop API for station data",
+    "description": "Create REST APIs for fetching station details",
+    "project": 1,
+    "employee_ids": [1, 3]
+  }
+  ```
+
+#### 4. Get All Employees (GET)
+- **Endpoint:** `GET http://localhost:8000/api/employees/`
+
+#### 5. Get All Projects (GET)
+- **Endpoint:** `GET http://localhost:8000/api/projects/`
+
+#### 6. Get All Tasks (GET)
+- **Endpoint:** `GET http://localhost:8000/api/tasks/`
+
 ## Author
 - **Sreejith S** - [GitHub](https://github.com/sreejith-0087)
 
